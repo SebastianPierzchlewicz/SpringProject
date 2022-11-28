@@ -13,6 +13,9 @@
             <column name="title" type="VARCHAR(100)"></column>
             <column name="original_title" type="VARCHAR(100)"></column>
             <column name="release_year" type="int"></column>
+            <column name="short_description" type="VARCHAR(200)"></column>
+            <column name="description" type="VARCHAR(10000)"></column>
+            <column name="youtube_trailer_id" type="VARCHAR(20)"></column>
             <column name="promoted" type="BOOLEAN"></column>
             <column name="genre_id" type="BIGINT">
                 <constraints nullable="true"

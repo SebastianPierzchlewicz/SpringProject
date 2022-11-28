@@ -8,6 +8,9 @@ public class MovieDtoMapper {
                 movie.getId(),
                 movie.getTitle(),
                 movie.getOriginal_title(),
+                movie.getShortDescription(),
+                movie.getDescription(),
+                movie.getYoutubeTrailerId(),
                 movie.getRelease_year(),
                 movie.getGenre().getName(),
                 movie.isPromoted()

@@ -11,11 +11,38 @@ public class Movie {
     private Long id;
     private String title;
     private String original_title;
+    private String shortDescription;
+    private String description;
+    private String youtubeTrailerId;
     private Integer release_year;
     @ManyToOne
     @JoinColumn(name = "genre_id", referencedColumnName = "id")
     private Genre genre;
     private boolean promoted;
+
+    public String getShortDescription() {
+        return shortDescription;
+    }
+
+    public void setShortDescription(String shortDescription) {
+        this.shortDescription = shortDescription;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getYoutubeTrailerId() {
+        return youtubeTrailerId;
+    }
+
+    public void setYoutubeTrailerId(String youtubeTrailerId) {
+        this.youtubeTrailerId = youtubeTrailerId;
+    }
 
     public Long getId() {
         return id;

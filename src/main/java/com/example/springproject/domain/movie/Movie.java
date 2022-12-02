@@ -15,10 +15,19 @@ public class Movie {
     private String description;
     private String youtubeTrailerId;
     private Integer release_year;
+    private String poster;
     @ManyToOne
     @JoinColumn(name = "genre_id", referencedColumnName = "id")
     private Genre genre;
     private boolean promoted;
+
+    public String getPoster() {
+        return poster;
+    }
+
+    public void setPoster(String poster) {
+        this.poster = poster;
+    }
 
     public String getShortDescription() {
         return shortDescription;

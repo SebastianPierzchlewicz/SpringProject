@@ -1,4 +1,4 @@
-package com.example.springproject.domain.web;
+package com.example.springproject.web;
 
 import com.example.springproject.domain.genre.GenreService;
 import com.example.springproject.domain.genre.dto.GenreDto;

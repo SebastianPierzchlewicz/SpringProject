@@ -1,4 +1,4 @@
-package com.example.springproject.domain.storage;
+package com.example.springproject.storage;
 
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Value;

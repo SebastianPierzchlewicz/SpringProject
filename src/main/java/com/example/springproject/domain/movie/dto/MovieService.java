@@ -3,13 +3,11 @@ package com.example.springproject.domain.movie.dto;
 import com.example.springproject.domain.genre.Genre;
 import com.example.springproject.domain.genre.GenreRepository;
 import com.example.springproject.domain.movie.Movie;
-import com.example.springproject.domain.storage.FileStorageService;
+import com.example.springproject.storage.FileStorageService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-
-import static java.util.stream.Collectors.toList;
 
 @Service
 public class MovieService {

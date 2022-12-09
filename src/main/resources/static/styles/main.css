@@ -261,3 +261,11 @@ movie-summary{
 .mc-form > option{
     color: black;
 }
+.mc-form-message{
+    color: #ffc107;
+    text-align: center;
+}
+.registration-link{
+    text-align: center;
+    margin-top: 32px;
+}

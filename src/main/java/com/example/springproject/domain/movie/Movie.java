@@ -1,8 +1,11 @@
 package com.example.springproject.domain.movie;
 
 import com.example.springproject.domain.genre.Genre;
+import com.example.springproject.rating.Rating;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class Movie {
@@ -19,6 +22,8 @@ public class Movie {
     @ManyToOne
     @JoinColumn(name = "genre_id", referencedColumnName = "id")
     private Genre genre;
+    @OneToMany(mappedBy = "movie")
+    private Set<Rating> ratings = new HashSet<>();
     private boolean promoted;
 
     public String getPoster() {
@@ -99,5 +104,13 @@ public class Movie {
 
     public void setPromoted(boolean promoted) {
         this.promoted = promoted;
+    }
+
+    public Set<Rating> getRatings() {
+        return ratings;
+    }
+
+    public void setRatings(Set<Rating> ratings) {
+        this.ratings = ratings;
     }
 }

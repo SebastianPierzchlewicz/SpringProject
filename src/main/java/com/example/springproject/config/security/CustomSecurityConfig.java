@@ -21,8 +21,9 @@ public class CustomSecurityConfig {
     @Bean
     public SecurityFilterChain filderChain(HttpSecurity http) throws Exception{
         http.authorizeHttpRequests((authz) -> authz
-                .mvcMatchers("/admin/**").hasAnyRole(RDITOR_ROLE,ADMIN_ROLE)
-                .anyRequest().permitAll()
+                        .mvcMatchers("/ocena-film").authenticated()
+                        .mvcMatchers("/admin/**").hasAnyRole(RDITOR_ROLE,ADMIN_ROLE)
+                        .anyRequest().permitAll()
         )
                 .formLogin(login->login
                         .loginPage("/login")

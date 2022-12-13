@@ -26,7 +26,8 @@
             </div>
             <div class="movie-list-item-rating">
               <i class="fas fa-star"></i>
-              <span>8.7</span>
+              <span th:if="${movie.ratingCount}" th:text="${#numbers.formatDecimal(movie.avgRating, 1, 1)}">8.0</span>
+              <span th:if="!${movie.ratingCount}">Brak ocen</span>
             </div>
           </div>
         </li>
@@ -46,7 +47,7 @@
             </div>
             <div class="movie-list-item-rating">
               <i class="fas fa-star"></i>
-              <span th:if="${movie.ratinCount}" th:text="${#numbers.formatDecimal(movie.avgRating(1,1))}">8.7</span>
+              <span th:if="${movie.ratingCount}" th:text="${#numbers.formatDecimal(movie.avgRating(1,1))}">8.</span>
               <span th:if="!${movie.ratingCount}">Brak ocen</span>
             </div>
           </div>
